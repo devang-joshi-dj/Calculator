@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-user-select: none;
+    /* Chrome all / Safari all */
+    -moz-user-select: none;
+    /* Firefox all */
+    -ms-user-select: none;
+    /* IE 10+ */
+    user-select: none;
+    /* Likely future */
+}
+
+.calculator {
+    text-align: center;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.calculator h1 {
+    margin-top: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.calculatorScreen {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(19, 43, 24);
+    border: 5px solid rgb(5, 31, 10);
+    color: rgb(255, 255, 255);
+    text-align: right;
+    font-size: 36px;
+    padding: 0 20px;
+    user-select: none;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+.calculator-keys {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+}
+
+button {
+    height: 80px;
+    background-color: rgb(255, 80, 95);
+    border: 1px solid rgb(0, 0, 0);
+    font-size: 32px;
+    color: rgb(19, 43, 24);
+    width: 25%;
+    border-radius: 0px;
+}
+
+.zeroBtn {
+    width: 50%;
+    cursor: pointer;
+    border-bottom-left-radius: 50px;
+}
+
+.operator, .equalSign {
+    background-color: rgb(16, 133, 201);
+    cursor: pointer;
+}
+
+.equalSign {
+    border-bottom-right-radius: 50px;
+}
+
+.allClear, .delete {
+    background-color: rgb(194, 173, 55);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(209, 58, 58);
+}
+
+.operator:hover, .equal-sign:hover {
+    background-color: rgb(99, 228, 82);
+}
+
+.allClear:hover, .delete:hover {
+    background-color: rgb(124, 98, 155);
+}
+
+.number, .percentage, .decimal {
+    cursor: pointer;
+}
