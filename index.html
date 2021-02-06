@@ -8,7 +8,7 @@
     <meta charset="UTF-8" />
     <meta
       name="description"
-      content="Its a Web Application which is an Interactive Calculator"
+      content="Its a Web Application which is an Interactive Calculator made with vanilla JavaScript"
     />
     <meta
       name="keywords"
@@ -21,10 +21,17 @@
   </head>
 
   <body>
+    <!-- Main Calculator Start -->
     <div class="calculator">
+      <!-- Calculator Heading Start -->
       <h1>Calculator</h1>
-      <input type="text" class="calculatorScreen" value="0" disabled />
+      <!-- Calculator Heading End -->
 
+      <!-- Calculator Screen Start -->
+      <input type="text" class="calculatorScreen" value="0" disabled />
+      <!-- Calculator Screen End -->
+
+      <!-- Calculator Buttons Start -->
       <div class="calculator-keys">
         <div class="row">
           <button class="allClear" value="">AC</button>
@@ -60,7 +67,9 @@
           <button class="equalSign" value="=">=</button>
         </div>
       </div>
+      <!-- Calculator Buttons End -->
     </div>
+    <!-- Main Calculator End -->
     <script src="script.js"></script>
   </body>
 </html>
