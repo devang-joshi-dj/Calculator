@@ -13,14 +13,14 @@ let prevInput = '0';
 let calculationOperator = '';
 let currentInput = '0';
 
-window.document.addEventListener("mousedown", function (event) {
-    // function to prevent user from selecting any text
-    event.preventDefault();
-});
+window.onload = () => {
+    // following task to be executed when page is loaded
+    calculatorScreen.innerHTML = 0;
+}
 
 const updateScreen = (number) => {
     // function to update Calculator Screen with any specified value
-    calculatorScreen.value = number;
+    calculatorScreen.innerHTML = number;
 }
 
 const inputNumber = (number) => {
@@ -34,10 +34,12 @@ const inputNumber = (number) => {
 
 const inputOperator = (operator) => {
     // function to perform operations on values according to the desired operator and update Calculator Screen
+
     equalSign.click();
     prevInput = currentInput;
     calculationOperator = operator;
     currentInput = '';
+
 }
 
 const calculate = () => {
@@ -62,7 +64,7 @@ const calculate = () => {
         default:
             return
     }
-    currentInput = result.toString();
+    currentInput = result;
     calculationOperator = '';
 }
 
@@ -75,7 +77,7 @@ const clearAll = () => {
 
 deleteChar.addEventListener('click', () => {
     // function to delete last character from Calculator Screen
-    currentInput = calculatorScreen.value.slice(0, -1);
+    currentInput = calculatorScreen.innerHTML.slice(0, -1);
     updateScreen(currentInput);
 });
 
@@ -119,7 +121,7 @@ decimal.addEventListener('click', () => {
 document.addEventListener("keydown", function (event) {
     // function to perform clickable operations on certain buttons when some specified key is pressed
     event.preventDefault();
-    var key = event.key;
+    let key = event.key;
 
     if (event.which === 32) {
         return false;
