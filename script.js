@@ -34,7 +34,6 @@ const inputNumber = (number) => {
 
 const inputOperator = (operator) => {
     // function to perform operations on values according to the desired operator and update Calculator Screen
-
     equalSign.click();
     prevInput = currentInput;
     calculationOperator = operator;
@@ -43,6 +42,8 @@ const inputOperator = (operator) => {
 }
 
 const calculate = () => {
+    console.log(prevInput)
+    console.log(currentInput)
     // function to perform operations on values according to the desired operator and return answer to currentInput variable
     let result = 0;
     switch (calculationOperator) {
@@ -62,7 +63,7 @@ const calculate = () => {
             result = Number(prevInput) % Number(currentInput);
             break;
         default:
-            return
+            return 0;
     }
     currentInput = result;
     calculationOperator = '';
