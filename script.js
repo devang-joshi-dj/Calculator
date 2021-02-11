@@ -42,8 +42,6 @@ const inputOperator = (operator) => {
 }
 
 const calculate = () => {
-    console.log(prevInput)
-    console.log(currentInput)
     // function to perform operations on values according to the desired operator and return answer to currentInput variable
     let result = 0;
     switch (calculationOperator) {
